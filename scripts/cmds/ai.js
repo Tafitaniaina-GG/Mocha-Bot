@@ -26,8 +26,8 @@ function normalizeText(text) {
 }
 
 function formatResponse(content) {
-  const header = `🧋✨ | 𝙼𝚘𝚌𝚑𝚊 𝙰𝚒\n━━━━━━━━━━━━━━━━\n`;
-  const footer = `━━━━━━━━━━━━━━━━`;
+  const header = `🧋✨ | Rtm 𝙰𝚒\n━━━━━━━━━━━━━━━🇲🇬\n`;
+  const footer = `━━━━━━━━━━━━━━🇲🇬`;
   return `${header}${content.trim()}\n${footer}`;
 }
 
@@ -150,7 +150,7 @@ module.exports = {
             body: formattedMessage
           }, (r, o) => {
             global.GoatBot.onReply.set(o.messageID, {
-              commandName: 'ai',
+              commandName: '.',
               messageID: o.messageID,
               author: i
             });
@@ -172,7 +172,7 @@ module.exports = {
             body: formattedMessage
           }, (r, o) => {
             global.GoatBot.onReply.set(o.messageID, {
-              commandName: 'ai',
+              commandName: '.',
               messageID: o.messageID,
               author: i
             });
